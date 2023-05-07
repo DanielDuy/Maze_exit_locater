@@ -11,22 +11,22 @@ class HvitRute extends Rute {
 
     @Override
     public void finn(Rute fra) {
-        System.out.println("Hvit rute, fortsetter!");
-        if (fra == naboNord) {
+        System.out.println("("+radNummer+", "+kolonneNummer+")");
+        if (fra == this.naboNord) {
             naboSyd.finn(this);
             naboVest.finn(this);
             naboOest.finn(this);
-        } else if (fra == naboSyd) {
+        } else if (fra == this.naboSyd) {
             naboNord.finn(this);
 
             naboVest.finn(this);
             naboOest.finn(this);
-        } else if (fra == naboVest) {
+        } else if (fra == this.naboVest) {
             naboNord.finn(this);
             naboSyd.finn(this);
 
             naboOest.finn(this);
-        } else if (fra == naboOest) {
+        } else if (fra == this.naboOest) {
             naboNord.finn(this);
             naboSyd.finn(this);
             naboVest.finn(this);

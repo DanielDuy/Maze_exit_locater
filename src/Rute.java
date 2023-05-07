@@ -1,7 +1,7 @@
 abstract class Rute {
 
-    private int radNummer;
-    private int kolonneNummer;
+    protected int radNummer;
+    protected int kolonneNummer;
     private Labyrint labyrint;
     protected Rute naboNord;
     protected Rute naboSyd;
@@ -35,6 +35,7 @@ abstract class Rute {
     }
 
     public void finn(Rute fra) {
+        System.out.println("("+radNummer+", "+kolonneNummer+")");
         if (fra == naboNord) {
             naboSyd.finn(this);
             naboVest.finn(this);
@@ -53,29 +54,11 @@ abstract class Rute {
             naboNord.finn(this);
             naboSyd.finn(this);
             naboVest.finn(this);
+        } else {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+            naboVest.finn(this);
+            naboOest.finn(this);
         }
     }
 }
-
-/*
-        if (fra == naboNord) {
-            finn(naboSyd);
-            finn(naboVest);
-            finn(naboOest);
-        } else if (fra == naboSyd) {
-            finn(naboNord);
-
-            finn(naboVest);
-            finn(naboOest);
-        } else if (fra == naboVest) {
-            finn(naboNord);
-            finn(naboSyd);
-
-            finn(naboOest);
-        } else if (fra == naboOest) {
-            finn(naboNord);
-            finn(naboSyd);
-            finn(naboVest);
-        }
-
-         */

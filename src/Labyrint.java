@@ -144,4 +144,5 @@ class Labyrint {
     protected void funnUtveiFra(int rad, int kol) {
         hentRute(rad, kol).finn(null);
     }
+
 }
