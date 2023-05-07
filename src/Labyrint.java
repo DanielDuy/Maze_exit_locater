@@ -35,8 +35,13 @@ class Labyrint {
                         settInnRute(radTeller, i, nySortRute);
 
                     } else if (Objects.equals(radAvRuter[i], ".")) {
-                        HvitRute nyHvitRute = new HvitRute(radTeller, i, this);
-                        settInnRute(radTeller, i, nyHvitRute);
+                        if (i == 0 || i == (radAvRuter.length-1) || radTeller == 0 || radTeller == (antallRader-1)) {
+                            Aapning nyAapning = new Aapning(radTeller, i, this);
+                            settInnRute(radTeller, i, nyAapning);
+                        } else {
+                            HvitRute nyHvitRute = new HvitRute(radTeller, i, this);
+                            settInnRute(radTeller, i, nyHvitRute);
+                        }
 
                     } else {
                         throw new Exception("Ugyldig tegn i labyrinten.");
@@ -134,5 +139,9 @@ class Labyrint {
             outputString += "\n";
         }
         return outputString;
+    }
+
+    protected void funnUtveiFra(int rad, int kol) {
+        hentRute(rad, kol).finn(null);
     }
 }

@@ -8,4 +8,5 @@ class HvitRute extends Rute {
     public String toString() {
         return ".";
     }
+
 }

@@ -8,4 +8,9 @@ class SortRute extends Rute {
     public String toString() {
         return "#";
     }
+
+    @Override
+    public void finn(Rute fra) {
+        return;
+    }
 }
