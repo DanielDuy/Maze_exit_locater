@@ -9,4 +9,32 @@ class HvitRute extends Rute {
         return ".";
     }
 
+    @Override
+    public void finn(Rute fra) {
+        System.out.println("Hvit rute, fortsetter!");
+        if (fra == naboNord) {
+            naboSyd.finn(this);
+            naboVest.finn(this);
+            naboOest.finn(this);
+        } else if (fra == naboSyd) {
+            naboNord.finn(this);
+
+            naboVest.finn(this);
+            naboOest.finn(this);
+        } else if (fra == naboVest) {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+
+            naboOest.finn(this);
+        } else if (fra == naboOest) {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+            naboVest.finn(this);
+        } else {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+            naboVest.finn(this);
+            naboOest.finn(this);
+        }
+    }
 }

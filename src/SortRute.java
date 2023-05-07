@@ -11,6 +11,6 @@ class SortRute extends Rute {
 
     @Override
     public void finn(Rute fra) {
-        return;
+        System.out.println("Sort rute, stopper!");
     }
 }

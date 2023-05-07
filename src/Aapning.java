@@ -6,7 +6,6 @@ class Aapning extends HvitRute {
 
     @Override
     public void finn(Rute fra) {
-        System.out.println("Fant åpning!");
-        return;
+        System.out.println("En åpning, stopper!");
     }
 }

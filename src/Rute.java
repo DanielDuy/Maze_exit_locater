@@ -19,7 +19,7 @@ abstract class Rute {
     }
 
     protected void settNaboNord(Rute naboRute) {
-        this.naboOest = naboRute;
+        this.naboNord = naboRute;
     }
 
     protected void settNaboSyd(Rute naboRute) {
@@ -35,9 +35,29 @@ abstract class Rute {
     }
 
     public void finn(Rute fra) {
-        finn(naboSyd);
+        if (fra == naboNord) {
+            naboSyd.finn(this);
+            naboVest.finn(this);
+            naboOest.finn(this);
+        } else if (fra == naboSyd) {
+            naboNord.finn(this);
 
-        /*
+            naboVest.finn(this);
+            naboOest.finn(this);
+        } else if (fra == naboVest) {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+
+            naboOest.finn(this);
+        } else if (fra == naboOest) {
+            naboNord.finn(this);
+            naboSyd.finn(this);
+            naboVest.finn(this);
+        }
+    }
+}
+
+/*
         if (fra == naboNord) {
             finn(naboSyd);
             finn(naboVest);
@@ -59,5 +79,3 @@ abstract class Rute {
         }
 
          */
-    }
-}
