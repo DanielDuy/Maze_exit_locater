@@ -6,6 +6,6 @@ class Aapning extends HvitRute {
 
     @Override
     public void finn(Rute fra) {
-        System.out.println("En åpning, stopper!");
+        System.out.println("("+radNummer+", "+kolonneNummer+")");
     }
 }

@@ -35,29 +35,16 @@ abstract class Rute {
     }
 
     public void finn(Rute fra) {
-        System.out.println("("+radNummer+", "+kolonneNummer+")");
-        if (fra == naboNord) {
-            naboSyd.finn(this);
-            naboVest.finn(this);
-            naboOest.finn(this);
-        } else if (fra == naboSyd) {
+        if (naboNord != fra) {
             naboNord.finn(this);
-
-            naboVest.finn(this);
-            naboOest.finn(this);
-        } else if (fra == naboVest) {
-            naboNord.finn(this);
+        }
+        if (naboSyd != fra) {
             naboSyd.finn(this);
-
-            naboOest.finn(this);
-        } else if (fra == naboOest) {
-            naboNord.finn(this);
-            naboSyd.finn(this);
+        }
+        if (naboVest != fra) {
             naboVest.finn(this);
-        } else {
-            naboNord.finn(this);
-            naboSyd.finn(this);
-            naboVest.finn(this);
+        }
+        if (naboOest != fra) {
             naboOest.finn(this);
         }
     }
