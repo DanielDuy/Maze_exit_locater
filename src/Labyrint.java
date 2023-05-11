@@ -146,9 +146,9 @@ class Labyrint {
             System.out.println("Kan ikke starte i sort rute.");
         } else {
             hentRute(rad, kol).finn(null);
-            for (int r = 0; r < labyrint.length; r++) {
-                for (int k = 0; k < labyrint[r].length; k++) {
-                    labyrint[r][k].settGaatGjennomFalse();
+            for (Rute[] rutes : labyrint) {
+                for (Rute rute : rutes) {
+                    rute.settGaatGjennomFalse();
                 }
             }
         }
