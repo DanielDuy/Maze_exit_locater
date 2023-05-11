@@ -2,11 +2,12 @@ abstract class Rute {
 
     protected int radNummer;
     protected int kolonneNummer;
-    private Labyrint labyrint;
+    protected Labyrint labyrint;
     protected Rute naboNord;
     protected Rute naboSyd;
     protected Rute naboVest;
     protected Rute naboOest;
+    protected boolean gaatGjennom;
 
     public Rute(int radNummer, int kolonneNummer, Labyrint labyrint) {
         this.radNummer = radNummer;
@@ -16,6 +17,7 @@ abstract class Rute {
         naboSyd = null;
         naboVest = null;
         naboOest = null;
+        gaatGjennom = false;
     }
 
     protected void settNaboNord(Rute naboRute) {
@@ -35,17 +37,20 @@ abstract class Rute {
     }
 
     public void finn(Rute fra) {
-        if (naboNord != fra) {
-            naboNord.finn(this);
-        }
-        if (naboSyd != fra) {
-            naboSyd.finn(this);
-        }
-        if (naboVest != fra) {
-            naboVest.finn(this);
-        }
-        if (naboOest != fra) {
-            naboOest.finn(this);
+        if (!gaatGjennom) {
+            gaatGjennom = true;
+            if (naboNord != fra) {
+                naboNord.finn(this);
+            }
+            if (naboSyd != fra) {
+                naboSyd.finn(this);
+            }
+            if (naboVest != fra) {
+                naboVest.finn(this);
+            }
+            if (naboOest != fra) {
+                naboOest.finn(this);
+            }
         }
     }
 }

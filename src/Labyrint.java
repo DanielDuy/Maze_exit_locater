@@ -131,18 +131,21 @@ class Labyrint {
 
     @Override
     public String toString() {
-        String outputString = "";
+        StringBuilder outputString = new StringBuilder();
         for (Rute[] rutes : labyrint) {
             for (Rute rute : rutes) {
-                outputString += rute.toString() + " ";
+                outputString.append(rute.toString()).append(" ");
             }
-            outputString += "\n";
+            outputString.append("\n");
         }
-        return outputString;
+        return outputString.toString();
     }
 
     protected void funnUtveiFra(int rad, int kol) {
-        hentRute(rad, kol).finn(null);
+        if (labyrint[rad][kol] instanceof SortRute) {
+            System.out.println("Kan ikke starte i sort rute.");
+        } else {
+            hentRute(rad, kol).finn(null);
+        }
     }
-
 }

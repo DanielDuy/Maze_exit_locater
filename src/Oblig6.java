@@ -5,12 +5,12 @@ public class Oblig6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Labyrint labyrint = new Labyrint("4.in");
+        Labyrint labyrint = new Labyrint("7.in");
 
         System.out.println("Slik ser labyrinten ut: \n");
         System.out.println(labyrint);
 
-        System.out.println("\nSkriv inn koordinater <rad> <kolonne> (\'-1\' for å avslutte):");
+        System.out.println("\nSkriv inn koordinater <rad> <kolonne> ('-1' for å avslutte):");
         String brukerInput = scanner.nextLine();
 
         if (Objects.equals(brukerInput, "-1")) {
