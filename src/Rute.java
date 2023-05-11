@@ -36,9 +36,17 @@ abstract class Rute {
         this.naboOest = naboRute;
     }
 
+    protected void settGaatGjennomTrue() {
+        gaatGjennom = true;
+    }
+
+    protected void settGaatGjennomFalse() {
+        gaatGjennom = false;
+    }
+
     public void finn(Rute fra) {
         if (!gaatGjennom) {
-            gaatGjennom = true;
+            settGaatGjennomTrue();
             if (naboNord != fra) {
                 naboNord.finn(this);
             }

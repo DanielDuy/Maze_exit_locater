@@ -12,7 +12,7 @@ class SortRute extends Rute {
     @Override
     public void finn(Rute fra) {
         if (!gaatGjennom) {
-            gaatGjennom = true;
+            settGaatGjennomTrue();
         }
     }
 }
