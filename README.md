@@ -9,3 +9,5 @@ Program created in Intellij IDEA Ultimate.
 Submission 7 (last submission) in the subject in1010, by spring 2023.
 The program should take in a file and create a maze (two-dimensional array).
 Then the program finds a way out of the maze by trying to move around the maze until it finds a way out.
+
+The files that ends with ".in" is the files I used to test the program. These are the mazes, where "." is the path and "#" is a wall.
