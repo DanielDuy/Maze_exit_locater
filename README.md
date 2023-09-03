@@ -18,4 +18,4 @@ The program runs in terminal where "Oblig6.java" contains the main method.
 2. Then choose coordinates for where to start in the labyrint (Choosing coordinates (15,33): % 15 13
 3. Then type "-1" in terminal and press enter on keyboard to end the program:                % -1
 
-After running these 3 commands, the program will use recursion to find any openings and return if found.
+After running these commands, the program will use recursion to find any openings and return if found.
