@@ -12,7 +12,7 @@ Then the program finds a way out of the maze by trying to move around the maze u
 
 The files that ends with ".in" is the files I used to test the program. These are the mazes, where "." is the path and "#" is a wall.
 
-The program runs in terminal where "Oblig6.java" is the main method. 
+The program runs in terminal where "Oblig6.java" contains the main method. 
 1. Compile java files:                                                                       % Javac Oblig6.java
 1. Run the code like this after compile (Choosing labyrint from file 5.in):                  % Java Oblig6 5.in
 2. Then choose coordinates for where to start in the labyrint (Choosing coordinates (15,33): % 15 13
